@@ -1,0 +1,9 @@
+name: SimpleThirst
+main: io.github.whalesaredelicious.simplethirst.SimpleThirst
+version: 1.0
+description: >
+             A simple thirst system. Based off Hydrate by tombath10.
+commands:
+    thirst:
+        description: Check thirst. Admins can also use this to set thirst levels.
+        usage: /thirst or /thirst set (player) (level)

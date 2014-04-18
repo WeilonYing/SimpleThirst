@@ -1,0 +1,19 @@
+<#if licenseFirst??>
+${licenseFirst}
+</#if>
+${licensePrefix}Copyright (C) ${date?date?string("yyyy")} ${project.organization!user}
+${licensePrefix?replace(" +$", "", "r")}
+${licensePrefix}This program is free software; you can redistribute it and/or
+${licensePrefix}modify it under the terms of the Creative Commons Attribution-ShareAlike 4.0
+${licensePrefix}International as published by the Creative Commons Organisation.
+${licensePrefix?replace(" +$", "", "r")}
+${licensePrefix}You are free to copy, redistribute and create derivative works
+${licensePrefix}from the material under the condition appropriate credit is
+${licensePrefix}given to the creator. In addition, if you remix, transform or
+${licensePrefix}build upon the material, you must distribute your contributions under
+${licensePrefix}the same license as the original.
+${licensePrefix?replace(" +$", "", "r")}
+${licensePrefix}You may get a copy of the license here: https://creativecommons.org/licenses/by-sa/4.0/
+<#if licenseLast??>
+${licenseLast}
+</#if>

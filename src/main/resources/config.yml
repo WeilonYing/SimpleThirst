@@ -1,0 +1,34 @@
+# #====== ONLY EDIT THE CONFIGURATION IN THIS FILE. NEVER EDIT USER DATA FROM HERE! ======
+# ======= THIS FILE STORES USER DATA ========
+
+#How long it takes to take off 1 level of thirst
+time-in-seconds-to-remove-1: 180
+
+#Amount of levels of thirst a player has
+number-of-thirst-levels: 20
+
+#Text on the sidebar
+scoreboard-text: Thirst
+ops-get-thirsty: false
+replenish-water: 12
+replenish-milk: 12
+replenish-melon: 4
+replenish-mushroom-soup: 9
+multiple-world-support: false
+multi-world1: world
+multi-world2: world_nether
+multi-world3: world_the_end
+
+#THIRST MESSAGE SETTINGS
+#If false, there will be no warning, low, danger death message.
+use-thirst-messages: true
+
+#Message to display if player dies from dehydration
+death-message: YOU HAVE DIED FROM DEHYDRATION!
+
+thirst-warning-message: You're starting to get a little thirsty. You might want to find a drink soon.
+thirst-warning-trigger-level: 10
+thirst-low-message: Your throat is really dry. Find a drink, fast.
+thirst-low-trigger-level: 5
+thirst-danger-message: You are seconds away from dying if you don't find a drink now.
+thirst-danger-trigger-level: 1
