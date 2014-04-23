@@ -1,6 +1,6 @@
 name: SimpleThirst
 main: io.github.whalesaredelicious.simplethirst.SimpleThirst
-version: 1.0
+version: 1.1
 description: >
              A simple thirst system. Based off Hydrate by tombath10.
 commands:
