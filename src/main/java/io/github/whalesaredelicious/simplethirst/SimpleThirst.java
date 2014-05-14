@@ -34,6 +34,7 @@ import org.bukkit.event.player.PlayerItemConsumeEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerRespawnEvent;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.potion.PotionEffect;
@@ -144,7 +145,7 @@ public final class SimpleThirst
   public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args)
   {
     Player player = (Player)sender;
-    if (commandLabel.equalsIgnoreCase("thirst")) {
+    if (commandLabel.equalsIgnoreCase("thirst") && sender instanceof Player) {
       if (args.length == 0)
       {
         if (!getConfig().contains(player.getName()))
@@ -348,6 +349,7 @@ public final class SimpleThirst
   
   public void onEnable()
   {
+    
     getServer().getPluginManager().registerEvents(this, this);
     for (Player p : Bukkit.getOnlinePlayers())
     {
@@ -371,6 +373,9 @@ public final class SimpleThirst
       }
     }
     FileConfiguration config = getConfig();
+    
+    PluginDescriptionFile descFile = this.getDescription();
+    getLogger().info(descFile.getName() + " " + descFile.getVersion() + " is enabled.");
     
     config.addDefault("time-in-seconds-to-remove-1", Integer.valueOf(180));
     config.addDefault("scoreboard-text", "Thirst");
@@ -719,7 +724,8 @@ public final class SimpleThirst
                     {
                       p.setHealth(0.0D);
                       p.sendMessage(ChatColor.RED + 
-                        SimpleThirst.this.getConfig().getString("death-message"));
+                      SimpleThirst.this.getConfig().getString("death-message"));
+                      getLogger().info("Player " + p + " has died from thirst.");
                     }
                   }
                 }

@@ -26,9 +26,12 @@ use-thirst-messages: true
 #Message to display if player dies from dehydration
 death-message: YOU HAVE DIED FROM DEHYDRATION!
 
-thirst-warning-message: You're starting to get a little thirsty. You might want to find a drink soon.
-thirst-warning-trigger-level: 10
-thirst-low-message: Your throat is really dry. Find a drink, fast.
-thirst-low-trigger-level: 5
-thirst-danger-message: You are seconds away from dying if you don't find a drink now.
-thirst-danger-trigger-level: 1
+level9-message: Keep an eye on your thirst!
+level8-message: Keep an eye on your thirst!
+level7-message: Keep an eye on your thirst!
+level6-message: Consider finding a drink soon!
+level5-message: You are starting to feel dehydrated!
+level4-message: DANGER Find a drink fast
+level3-message: DANGER Find a drink fast
+level2-message: DANGER Find a drink fast
+level1-message: DANGER FIND A DRINK NOW!
